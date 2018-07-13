@@ -1,0 +1,35 @@
+cdn_provider: ''
+_core:
+  default_config_hash: _5qrDuRmWmRVjW00si3U1s1NrgrocA4N653EYGRfgEE
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://assessment.local/themes/custom/gobear/favicon.ico'
+  use_default: 1
+schemas:
+  bootstrap: 8000
+  gobear: 8000
+features:
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+  node_user_picture: 1
+logo:
+  path: 'public://gobear-logo.jpg'
+  url: ''
+  use_default: 0
+region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  mobile_menu: ''
+  crumbs: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: well
+  bottom: ''
+  footer: ''
+table_responsive: '-1'
+table: ''
