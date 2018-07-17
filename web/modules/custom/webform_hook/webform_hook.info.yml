@@ -1,0 +1,10 @@
+type: module
+name: Webform Hook
+description: Hook validate to set value when have parameter
+dependencies:
+  - 'drupal:webform'
+
+version: '8.x-1.0'
+core: '8.x'
+project: 'Custom'
+

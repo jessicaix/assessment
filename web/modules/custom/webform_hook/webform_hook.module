@@ -1,0 +1,31 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: nhan
+ * Date: 7/17/18
+ * Time: 9:56 AM
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implement hook_form_alter()
+ */
+function webform_hook_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if($form_id == 'webform_submission_assessment_form_add_form'){
+    $form['actions']['submit']['#validate'][] = 'webform_hook_form_validate';
+  }
+}
+
+/**
+ * Implement hook_form_validate
+ */
+function webform_hook_form_validate($form, FormStateInterface $form_state){
+  if(isset($_GET['age']) && !empty($_GET['age'])){
+    $form_state->setValue('age', $_GET['age']);
+  }
+  if(isset($_GET['city']) && !empty($_GET['city'])){
+    $form_state->setValue('city', $_GET['city']);
+  }
+
+}

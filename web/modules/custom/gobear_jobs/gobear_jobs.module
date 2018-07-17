@@ -1,0 +1,21 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: nhan
+ * Date: 7/17/18
+ * Time: 9:56 AM
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function gobear_jobs_theme($existing, $type, $theme, $path)
+{
+  return [
+    'jobs_list' => [
+      'variables' => ['jobs' => NULL],
+      'path' => $path . '/templates/',
+      'template' => 'gobear-jobs-list',
+    ]
+  ];
+}

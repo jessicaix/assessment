@@ -1,0 +1,22 @@
+{% if jobs %}
+    <div class="container">
+        <div class="row">
+            {% for job in jobs %}
+                <div class="col-sm-12 job-item">
+
+                    <h3>{{ job.title }}</h3>
+                    <p class="company">
+                        <span>@{{ job.company }}</span>  |  <span>{{ job.location }}</span>
+                    </p>
+                    <p class="date">{{ 'Published'|t }} {{ job.created_at|date("m/d/Y") }}</p>
+                    <div class="description">
+                        <a class="more" href="#">More info ></a>
+                        <div class="desc-detail">{{ job.description|raw }}</div>
+                        <a class="less" href="#">< Less</a>
+                    </div>
+                    <div class="type">{{ job.type }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
