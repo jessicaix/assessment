@@ -1,0 +1,7 @@
+gobear_jobs:
+  version: VERSION
+  js:
+      js/gobear_jobs.js: {}
+  css:
+    layout:
+      css/gobear_jobs.css: {}

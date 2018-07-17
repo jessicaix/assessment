@@ -1,0 +1,6 @@
+gobear_jobs.list:
+  path: '/jobs'
+  defaults:
+    _controller: '\Drupal\gobear_jobs\Controller\GobearJobs::jobs'
+  requirements:
+    _access: 'TRUE'

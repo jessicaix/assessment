@@ -1,0 +1,8 @@
+type: module
+name: Gobear Jobs
+description: Create custom module for load the job from Json
+
+version: '8.x-1.0'
+core: '8.x'
+project: 'Gobear'
+
