@@ -1,0 +1,9 @@
+gobear_jobs:
+  version: 1.x
+  css:
+    theme:
+      assets/css/gobear.css: {}
+  fonts:
+    css:
+      theme:
+        '//fonts.googleapis.com/css?family=Varela+Round': { type: external, minified: true }

@@ -1,0 +1,17 @@
+<!-- Add you custom twig html here -->
+{% for key,item in items %}
+	<div class="job-info-container">
+		<div class="job-info-left-wrapper">
+			<h2>{{ item.title }}</h2>
+			<div class="job-location-wrapper">
+				<a href="{{ item.company_url }}">@ {{ item.company }}</a> <span class="job-location-title">{{ item.location }}</span>
+			</div>
+			<div class="job-published-wrapper"><span class="job-published-date">Published on {{ item.created_at }}</span> <span class="job-publish-company">Tean Design</span> </div>
+			<div class="job-more-info-link"><a href="#" data-toggle="collapse" data-target="#desc">More Info > </a> </div>
+			<div id="desc" class="collapse">{{ item.description | raw }}</div>
+		</div>
+		<div class="job-apply-right-wrapper">
+			<button class="btn-apply">{{ item.type }}</button>
+		</div>
+	</div>
+{% endfor %}
