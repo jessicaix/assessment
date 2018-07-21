@@ -3,6 +3,7 @@ framework:
     theme:
       stylesheets/style.css: {}
   js:
+    js/style.js: {}
     bootstrap/assets/javascripts/bootstrap/affix.js: {}
     bootstrap/assets/javascripts/bootstrap/alert.js: {}
     bootstrap/assets/javascripts/bootstrap/button.js: {}

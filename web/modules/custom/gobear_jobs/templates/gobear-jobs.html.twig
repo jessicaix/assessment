@@ -1,0 +1,20 @@
+
+{%for data in jobs_var%}
+
+  <div class="jobs-data">
+    <div class="job-title"><h2>{{data.title}}</h2></div>
+    <div class="job-details mb">
+      <span class="job-link"> <a href="{{data.company_url}}">@{{data.company}} </a></span> |
+      <span class="job-location">{{data.location}}</span>
+    </div>
+    <div class="job-publication mb">
+      <span>Published {{data.created_at}}</span> |
+      <span class="job-type">{{data.type}}</span>
+    </div>
+    <div class="job-description">
+     <span id="text">{{data.description | raw}}</span>
+     <span id="more">More Info >> </span>
+     <span id="less">Less Info << </span>
+    </div>
+  </div>
+{% endfor %}

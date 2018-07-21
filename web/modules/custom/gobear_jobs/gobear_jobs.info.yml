@@ -1,0 +1,7 @@
+name: 'gobear_jobs'
+type: module
+description: 'Go bear jobs'
+core: 8.x
+package: 'gobear'
+dependencies:
+  - node
