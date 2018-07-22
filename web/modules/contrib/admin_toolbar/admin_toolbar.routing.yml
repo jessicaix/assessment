@@ -1,0 +1,9 @@
+
+admin_toolbar.default_form:
+  path: 'n'
+  defaults:
+    _form: '\Drupal\admin_toolbar\Form\DefaultForm'
+    _title: 'DefaultForm'
+  requirements:
+    _access: 'TRUE'
+  

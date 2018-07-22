@@ -1,0 +1,5 @@
+name: 'GoBear Job Listing'
+type: module
+description: 'Gobear Job Listing Page'
+core: 8.x
+package: 'Custom'

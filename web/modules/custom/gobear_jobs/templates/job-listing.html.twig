@@ -1,0 +1,20 @@
+<div class="job-listing">
+	{% for key, job in jobs %}
+	<div class="row">
+		<div class="data">
+			<h3>{{ job.title }}</h3>
+			<div class="location"><a href="{{ job.url }}" target="_blank">@ {{ job.company }}</a> | <span>{{ job.location }}</span></div>
+			<div class="publish-by"><span>Published {{ job.created_at }}</span></div>
+			<div class="more-info"><a class="show-desc more-anchr">More info ></a><a class="show-desc less-anchr">Less info ></a><div class="desc">{{ job.description|raw }}</div></div>
+		</div>
+		<div class="work-type">
+			<span>{{ job.type }}</span>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+
+{{ form.form_build_id }} {# required #}
+{{ form.form_token }}{# required #}
+{{ form.form_id }} {# required #}
+{{ form.actions }} {# will render the action buttons in the form #}
