@@ -1,0 +1,114 @@
+// Variables
+$base-color: #333;
+$border-color: #efefef;
+$link-color: #7eacf6;
+$gray-color: #999;
+$green-color: #6db141;
+$white-color: #fff;
+
+body {
+  border: 0 none;
+  color: $base-color;
+  font-size: 15px;
+  font-family: 'Roboto Condensed', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+  transition: all .35s linear 0s;
+
+  * {
+    outline: none;
+  }
+}
+
+// Job listing banner
+#navbar {
+  background-image: url(../images/jobs-header-bg.jpg);
+  background-repeat: no-repeat;;
+  background-position: 0 0;
+  background-size: cover;
+  width: 100%;
+  border: 0;
+  max-width: inherit;
+  background-color: transparent;
+  padding: 65px 0;
+  border-radius: 0;
+  .navbar-header {
+    float: none;
+  }
+  .top-banner {
+    h2 {
+      text-align: center;
+      font-family: 'Varela Round';
+      font-size: 35px;
+      color: $white-color;
+    }
+  }
+}
+
+// Job listing page
+.job-listing {
+  .row {
+    padding: 17px 58px;
+    border: 1px solid $border-color;
+    display: flex;
+    align-items: start;
+    margin-bottom: 20px;
+    &.row-toggle {
+      .data {
+        .more-anchr {
+          display: none;
+        }
+        .less-anchr {
+          display: inline-block;
+        }
+        .desc {
+          display: block;
+        }
+      }
+    }
+    .data {
+      width: 60%;
+      h3 {
+        margin: 0 0 8px;
+        font-family: 'Varela Round';
+        font-size: 18px;
+      }
+      .location {
+        color: $gray-color;
+        a {
+          color: $link-color;
+        }
+      }
+      .publish-by {
+        color: $gray-color;
+      }
+      .more-info {
+        a {
+          color: $link-color;
+          cursor: default;
+        }
+      }
+      .desc,
+      .less-anchr {
+        display: none;
+      }
+    }
+    .work-type {
+      text-align: right;
+      width: 40%;
+      margin-top: 20px;
+      span {
+        background-color: $green-color;
+        padding: 6px 15px;
+        color: $white-color;
+        text-transform: uppercase;
+        text-align: center;
+        min-width: 110px;
+        display: inline-block;
+      }
+    }
+  }
+}
