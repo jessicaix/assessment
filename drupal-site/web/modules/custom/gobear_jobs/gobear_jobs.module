@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Define hooks for gobear_jobs module.
+ *
+ *
+ * @created author: can
+ * @created date: 2018/08/22
+ */
+
+function gobear_jobs_theme($existing, $type, $theme, $path) {
+  return [
+    'jobs_content_list_block' => array(
+      'template' => 'jobs-content-list-block',
+      'variables' => array(
+        'content_list' => array(),
+      ),
+    ),
+  ];
+}

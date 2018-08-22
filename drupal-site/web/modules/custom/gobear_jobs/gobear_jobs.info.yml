@@ -1,0 +1,8 @@
+name: "Gobear jobs"
+type: module
+description: Get/show data form third party.
+core: 8.x
+package: Modules
+project: gobear_jobs
+dependencies:
+  - block

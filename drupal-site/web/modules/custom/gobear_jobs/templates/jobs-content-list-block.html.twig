@@ -1,0 +1,10 @@
+<ul>
+    {% for item in content_list %}
+        <h1><b>Title:</b> {{ item.title }}</h1>
+        <li><b>Company:</b> {{ item.company }}</li>
+        <li><b>Location:</b> {{ item.location }}</li>
+        <li><b>Type:</b> {{ item.type }}</li>
+        <li><b>Create at:</b> {{ item.created_at }}</li>
+        <div><b>Description:</b> {{ item.description|raw }}</div>
+    {% endfor %}
+</ul>

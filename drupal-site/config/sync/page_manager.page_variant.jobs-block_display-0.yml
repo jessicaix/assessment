@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.jobs
+  module:
+    - gobear_jobs
+id: jobs-block_display-0
+label: 'Block page'
+variant: block_display
+variant_settings:
+  blocks:
+    3055e0c1-0554-4315-926f-eb8ec3fe6744:
+      id: jobs_content_block
+      label: 'Jobs Content'
+      provider: gobear_jobs
+      label_display: '0'
+      region: top
+      weight: 0
+      uuid: 3055e0c1-0554-4315-926f-eb8ec3fe6744
+      context_mapping: {  }
+  id: block_display
+  uuid: 35dd1e13-7e74-4fa6-8e23-9e12ebf66544
+  label: null
+  weight: 0
+  page_title: ''
+page: jobs
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }
