@@ -1,0 +1,7 @@
+---
+mysql_packages:
+  - MySQL-python
+  - mysql-community-server
+  - mysql-community-client
+  - mysql-community-libs
+  - mysql-community-devel

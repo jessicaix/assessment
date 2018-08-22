@@ -1,0 +1,67 @@
+---
+php71_repos:
+  - https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+
+php71_common_enablerepo: remi-safe
+
+php71_common_packages:
+  - gd-last
+
+php_repos:
+  - https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+
+php_enablerepo: remi-php71
+
+php_packages:
+  - php
+  - php-bcmath
+  - php-cli
+  - php-common
+  - php-devel
+  - php-gd
+  - php-json
+  - php-mbstring
+  - php-mcrypt
+  - php-mysqlnd
+  - php-opcache
+  - php-pdo
+  - php-pear
+  - php-process
+  - php-xml
+  - php-zip
+
+php_ini_template: php-7.1.13_php.ini.j2
+
+#
+# role: php
+# task: php
+# template: php-7.1.13_php.ini.j2
+#
+#php_ini_expose_php: "Off"
+#php_ini_memory_limit: "1024M"
+#php_ini_error_reporting: "E_ALL"
+#php_ini_display_errors: "On"
+#php_ini_post_max_size: "100M"
+#php_ini_upload_max_filesize: "100M"
+#php_ini_max_file_uploads: "20"
+#php_ini_date_timezone: "Asia/Tokyo"
+
+php_ini_rewrites:
+  - section: PHP
+    option: expose_php
+    value: "Off"
+  - section: PHP
+    option: memory_limit
+    value: "1024M"
+  - section: PHP
+    option: error_reporting
+    value: "E_ALL"
+  - section: PHP
+    option: post_max_size
+    value: "100M"
+  - section: PHP
+    option: upload_max_filesize
+    value: "100M"
+  - section: Date
+    option: date.timezone
+    value: "Asia/Tokyo"

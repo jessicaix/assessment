@@ -1,0 +1,6 @@
+name: "PS Config Split Remove UUID"
+type: module
+description: Remove UUID from config file
+core: 8.x
+package: PS Modules
+project: ps_config_split_remove_uuid

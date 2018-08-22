@@ -1,0 +1,10 @@
+---
+# see:
+# http://docs.ansible.com/ansible/latest/timezone_module.html
+- name: set timezone
+  timezone:
+    name: "{{ timezone }}"
+      # defaults/main.yml
+      # define in hosts/[stage]/group_vars/all.yml to overwrite
+  notify: timezone changed
+

@@ -1,0 +1,23 @@
+---
+personal_git_configs:
+  - scope: global
+    name: core.editor
+    value: "vim"
+  - scope: global
+    name: core.autocrlf
+    value: "false"
+  - scope: global
+    name: core.filemode
+    value: "false"
+  - scope: global
+    name: color.ui
+    value: "auto"
+  - scope: global
+    name: http.sslVerify
+    value: "false"
+  - scope: global
+    name: http.postBuffer
+    value: "157286400"
+  - scope: global
+    name: push.default
+    value: "simple"

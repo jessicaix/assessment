@@ -1,0 +1,12 @@
+---
+#
+# httpd
+# template: httpd-2.4.6_httpd.conf.j2
+#
+apache_user_umask: "002"
+
+apache_run_user: "apache"
+apache_run_group: "apache"
+
+apache_conf_template: httpd-2.4.6_httpd.conf.j2
+

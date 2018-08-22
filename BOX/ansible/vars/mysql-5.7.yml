@@ -1,0 +1,16 @@
+---
+php_mysql_repos:
+  - https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+
+php_mysql_enablerepo: mysql57-community
+
+php_mysql_packages:
+  - MySQL-python
+  - mysql-community-client
+
+
+mysql_repos:
+  - https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+
+mysql_enablerepo: mysql57-community
+

@@ -1,0 +1,20 @@
+---
+- hosts: web
+  become: yes
+  roles:
+    - role: common
+      tags: common
+    - role: apache
+      tags: apache
+    - role: mysql
+      tags: mysql
+      mysql_version: mysql-5.7
+    - role: php
+      tags: php
+    - role: personal
+      tags: personal
+    - role: application
+      tags: application
+      base_vars: base_gobear
+    - role: drupal_console
+      tags: drupal_console

@@ -1,0 +1,13 @@
+---
+# see:
+# http://docs.ansible.com/ansible/latest/locale_gen_module.html
+
+# comment out due to following error:
+# /etc/locale.gen and /var/lib/locales/supported.d/local are missing. Is the package "locales" installed?
+
+#- name: set locale
+#  locale_gen:
+#    state: present
+#    name: "{{ locale }}"
+#      # defaults/main.yml
+#      # define in hosts/[stage]/group_vars/all.yml to overwrite

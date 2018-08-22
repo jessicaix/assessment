@@ -1,0 +1,124 @@
+"
+" common
+"
+set number
+set noic
+set expandtab
+set tabstop=2
+set fileencodings=utf-8,sjis,euc-jp
+set encoding=utf-8
+" set fileformats=unix,dos,mac
+set fileformats=unix
+set hlsearch
+set nobackup
+set noswapfile
+
+syntax on
+
+"
+" neobundle
+"
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite-outline'
+NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'elzr/vim-json'
+NeoBundle 'evidens/vim-twig'
+NeoBundle 'jwalton512/vim-blade'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tpope/vim-pathogen'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'davidhalter/jedi'
+NeoBundle 'davidhalter/jedi-vim'
+
+NeoBundleCheck
+call neobundle#end()
+
+filetype plugin on
+
+"
+" nerdcommenter
+"
+augroup _nerdcommenter
+    let NERDSpaceDelims = 1
+    nmap ,, <Plug>NERDCommenterToggle
+    vmap ,, <Plug>NERDCommenterToggle
+augroup END
+
+"
+" drupal module files
+"
+augroup _eslintrc
+    autocmd!
+    autocmd BufRead,BufNewFile *.module set syntax=php
+augroup END
+
+"
+" unite-outline
+"
+let g:unite_split_rule = 'botright'
+noremap ,u <ESC>:Unite -vertical -winwidth=40 outline<Return>
+
+"
+" syntax: .php_cs
+"
+augroup _php_cs
+    autocmd!
+    autocmd BufRead,BufNewFile .php_cs set syntax=php
+augroup END
+
+"
+" syntax: composer.json.*
+"
+augroup _composer_json_dist
+    autocmd!
+    autocmd BufRead,BufNewFile composer.json.* set syntax=json
+augroup END
+
+"
+" syntax: composer.lock
+"
+augroup _composer_lock
+    autocmd!
+    autocmd BufRead,BufNewFile composer.lock set syntax=json
+augroup END
+
+"
+" syntax: drupal *.install
+"
+augroup _drupal_install
+    autocmd!
+    autocmd BufRead,BufNewFile *.install set syntax=php
+augroup END
+
+"
+" syntax: drupal *.theme
+"
+augroup _drupal_theme
+    autocmd!
+    autocmd BufRead,BufNewFile *.theme set syntax=php
+augroup END
+
+"
+" syntax: drupal *.module
+"
+augroup _drupal_module
+    autocmd!
+    autocmd BufRead,BufNewFile *.module set syntax=php
+augroup END
+
+"
+" syntax: drupal *.profile
+"
+augroup _drupal_profile
+    autocmd!
+    autocmd BufRead,BufNewFile *.profile set syntax=php
+augroup END
+

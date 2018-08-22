@@ -1,0 +1,41 @@
+<VirtualHost *:80>
+    ServerName local-assessment-design.{{ base_domain }}
+
+    DocumentRoot /home/httpd/design_01
+
+    CustomLog "logs/design_01-access_log" common
+    ErrorLog  "logs/design_01-error_log"
+
+    <Directory /home/httpd/design_01>
+        Require all granted
+        Options FollowSymLinks
+        AllowOverride All
+    </Directory>
+
+    FileEtag None
+    RequestHeader unset If-Modified-Since
+    Header set Cache-Control no-store
+</VirtualHost>
+
+<VirtualHost *:443>
+    SSLEngine On
+    SSLCertificateFile    /etc/pki/tls/certs/localhost.crt
+    SSLCertificateKeyFile /etc/pki/tls/private/localhost.key
+
+    ServerName local-assessment-design.{{ base_domain }}
+
+    DocumentRoot /home/httpd/design_01
+
+    CustomLog "logs/design_01-ssl-access_log" common
+    ErrorLog  "logs/design_01-ssl-error_log"
+
+    <Directory /home/httpd/design_01>
+        Require all granted
+        Options FollowSymLinks
+        AllowOverride All
+    </Directory>
+
+    FileEtag None
+    RequestHeader unset If-Modified-Since
+    Header set Cache-Control no-store
+</VirtualHost>

@@ -1,0 +1,9 @@
+---
+php_mysql_repos:
+  - https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
+
+php_mysql_enablerepo: mysql80-community
+
+php_mysql_packages:
+  - MySQL-python
+  - mysql-community-client

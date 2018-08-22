@@ -1,0 +1,9 @@
+---
+- name: stop firewalld according to setting
+  systemd:
+    name: firewalld.service
+    enabled: no
+    state: stopped
+  when:
+    - disable_firewalld is defined
+    - disable_firewalld == "yes" # hosts/[stage]/group_vags/all.yml

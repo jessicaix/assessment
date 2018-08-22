@@ -1,0 +1,11 @@
+{
+    "name": "tci_drupal/ps_config_split_remove_uuid",
+    "description": "",
+    "type": "drupal-module",
+    "require": {
+        "drupal/core": "~8.4.4"
+    },
+    "require-dev": {},
+    "autoload": {},
+    "autoload-dev": {}
+}

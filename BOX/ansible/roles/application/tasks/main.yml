@@ -1,0 +1,57 @@
+---
+- name: include vars
+  include_vars: "{{ base_vars }}.yml"
+
+- name: mysql create databases
+  mysql_db:
+    state: present
+    name: "{{ item.name }}"
+    collation: "{{ item.collation }}"
+  with_items: "{{ application_mysql_databases }}"
+
+- name: mysql create user
+  mysql_user:
+    state: present
+    host: "{{ item.host }}"
+    name: "{{ item.user_name }}"
+    password: "{{ item.user_password }}"
+    priv: "{{ item.priv }}"
+  with_items: "{{ application_mysql_users }}"
+
+- name: make application directory
+  file:
+    path: "{{ item.path }}"
+    state: directory
+    owner: "{{ item.owner }}"
+    group: "{{ item.group }}"
+    mode: "{{ item.mode }}"
+    recurse: "{{ item.recurse }}"
+  with_items: "{{ application_directories }}"
+
+- name: copy httpd vhosts conf
+  template:
+    src: "{{ item.src }}"
+    dest: "/etc/httpd/conf.vhosts.d/{{ item.dest }}"
+    backup: yes
+    owner: root
+    group: root
+    mode: 0644
+  with_items: "{{ application_vhosts }}"
+  notify: restart httpd
+
+- name: change primary group of vagrant user
+  user:
+    name: vagrant
+    group: apache
+
+- name: systemd httpd
+  systemd:
+    name: httpd
+    enabled: yes
+    state: started
+
+- name: systemd mysqld
+  systemd:
+    name: mysqld
+    enabled: yes
+    state: started

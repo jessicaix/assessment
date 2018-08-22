@@ -1,0 +1,10 @@
+---
+- include_tasks: hosts.yml
+- include_tasks: selinux.yml
+- include_tasks: ipv6.yml
+- include_tasks: yum_update.yml
+- include_tasks: common_packages.yml
+- include_tasks: firewalld.yml
+- include_tasks: locale.yml
+- include_tasks: timezone.yml
+- include_tasks: sshd.yml

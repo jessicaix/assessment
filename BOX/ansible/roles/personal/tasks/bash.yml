@@ -1,0 +1,8 @@
+---
+- name: copy .bashrc
+  become_user: vagrant
+  template:
+    src: bashrc.j2
+    dest: ~/.bashrc
+    backup: yes
+    mode: 0644

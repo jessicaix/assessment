@@ -1,0 +1,15 @@
+---
+- name: yum install to configure SELinux
+  yum:
+    state: present
+    name: "{{ item }}"
+  with_items:
+    - libselinux-python
+
+- name: configure SELinux
+  selinux:
+    policy: targeted
+    state: permissive
+  when:
+    - ansible_selinux.config_mode is defined
+    - ansible_selinux.config_mode == "enforcing"

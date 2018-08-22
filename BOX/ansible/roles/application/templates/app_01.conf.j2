@@ -1,0 +1,41 @@
+<VirtualHost *:80>
+    ServerName local-assessment.{{ base_domain }}
+
+    DocumentRoot /home/httpd/app_01/drupal-site/web
+
+    CustomLog "logs/app_01-access_log" common
+    ErrorLog  "logs/app_01-error_log"
+
+    <Directory /home/httpd/app_01/drupal-site/web>
+        Require all granted
+        Options FollowSymLinks
+        AllowOverride All
+    </Directory>
+
+    FileEtag None
+    RequestHeader unset If-Modified-Since
+    Header set Cache-Control no-store
+</VirtualHost>
+
+<VirtualHost *:443>
+    SSLEngine On
+    SSLCertificateFile    /etc/pki/tls/certs/localhost.crt
+    SSLCertificateKeyFile /etc/pki/tls/private/localhost.key
+
+    ServerName local-assessment.{{ base_domain }}
+
+    DocumentRoot /home/httpd/app_01/drupal-site/web
+
+    CustomLog "logs/app_01-ssl-access_log" common
+    ErrorLog  "logs/app_01-ssl-error_log"
+
+    <Directory /home/httpd/app_01/drupal-site/web>
+        Require all granted
+        Options FollowSymLinks
+        AllowOverride All
+    </Directory>
+
+    FileEtag None
+    RequestHeader unset If-Modified-Since
+    Header set Cache-Control no-store
+</VirtualHost>

@@ -1,0 +1,40 @@
+---
+locale: en_US.UTF-8
+
+timezone: Asia/Tokyo
+
+common_packages:
+  - yum-utils
+  - gcc
+  - gcc-c++
+  - zip
+  - unzip
+  - gzip
+  - bzip2-devel
+  - sqlite-devel
+  - wget
+  - rsync
+  - git
+  - patch
+  - openssl-devel
+  - nmap
+  - nkf
+  - vim-enhanced
+  - tree
+  - mlocate
+  - dstat
+  - sysstat
+  - sysbench
+  - vnstat
+  - strace
+  - lsof
+  - iftop
+
+#
+# role: common
+# task: sshd
+# template: sshd_config.j2
+#
+sshd_config_port: 22
+sshd_config_password_authentication: "no"
+sshd_config_sftp_option: "-u 0002"

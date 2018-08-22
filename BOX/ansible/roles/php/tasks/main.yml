@@ -1,0 +1,37 @@
+---
+- name: add repos
+  yum:
+    state: present
+    name: "{{ item }}"
+  with_items: "{{ php71_repos }}" # defaults/main.yml
+
+- name: yum install common packages for php
+  yum:
+    enablerepo: "{{ php71_common_enablerepo }}"
+    state: present
+    name: "{{ item }}"
+  with_items: "{{ php71_common_packages }}"
+
+- name: yum install php
+  yum:
+    enablerepo: "{{ php_enablerepo }}" # defaults/main.yml
+    state: present
+    name: "{{ item }}"
+  with_items: "{{ php_packages }}" # group_vars/web.yml
+
+#- name: copy /etc/php.ini
+#  template:
+#    src: "{{ php_ini_template }}" # defaults/main.yml
+#    dest: /etc/php.ini
+#    backup: yes
+#    owner: root
+#    group: root
+#    mode: 0644
+
+- name: edit /etc/php.ini
+  ini_file:
+    path: /etc/php.ini
+    section: "{{ item.section }}"
+    option: "{{ item.option }}"
+    value: "{{ item.value }}"
+  loop: "{{ php_ini_rewrites }}"

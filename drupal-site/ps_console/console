@@ -1,0 +1,76 @@
+#!/usr/bin/env php
+<?php
+use Dotenv\Dotenv;
+use Drupal\Console\Application as DrupalApplication;
+use Drupal\Console\Bootstrap\Drupal;
+use Drupal\Console\Core\Style\DrupalStyle;
+use Drupal\Console\Core\Utils\ConfigurationManager;
+use Drupal\Console\Core\Utils\DrupalFinder;
+use Symfony\Component\Console\Output\ConsoleOutput;
+use Symfony\Component\Console\Input\ArrayInput;
+use Tci\PsConsole\Application;
+use Tci\PsConsole\Command\ConfigExportCommand;
+use Tci\PsConsole\Command\ConfigImportCommand;
+use Tci\PsConsole\Command\ModuleInstallCommand;
+use Tci\PsConsole\Command\ModuleListCommand;
+use Tci\PsConsole\Command\ModuleUninstallCommand;
+use Tci\PsConsole\Command\SiteInstallCommand;
+use Tci\PsConsole\Command\ThemeInstallCommand;
+use Tci\PsConsole\Command\ThemeChangeCommand;
+use Tci\PsConsole\CustomCommand\SchedulerExecuteCommand;
+
+// Based on drupal/console/bin/drupal.php
+
+set_time_limit(0);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+$autoload = include_once __DIR__ . '/../vendor/autoload.php';
+
+$output = new ConsoleOutput();
+$input = new ArrayInput([]);
+$io = new DrupalStyle($input, $output);
+
+$root = realpath(__DIR__ . '/..');
+
+$drupalFinder = new DrupalFinder();
+if (!$drupalFinder->locateRoot($root)) {
+    $io->error('DrupalConsole must be executed within a Drupal Site.');
+
+    exit(1);
+}
+
+chdir($drupalFinder->getDrupalRoot());
+$configurationManager = new ConfigurationManager();
+$configuration = $configurationManager
+    ->loadConfiguration($drupalFinder->getComposerRoot())
+    ->getConfiguration();
+
+$drupal = new Drupal($autoload, $drupalFinder, $configurationManager);
+$container = $drupal->boot();
+
+if (!$container) {
+    $io->error('Something was wrong. Drupal can not be bootstrap.');
+
+    exit(1);
+}
+
+$dotenv = new Dotenv(__DIR__ . '/..');
+$dotenv->load();
+
+$drupalApplication = new DrupalApplication($container);
+$drupalApplication->setAutoExit(false);
+
+$application = new Application();
+$application->setDrupalApplication($drupalApplication);
+$application->add(new ConfigExportCommand(__DIR__));
+$application->add(new ConfigImportCommand(__DIR__));
+$application->add(new ModuleInstallCommand(__DIR__));
+$application->add(new ModuleListCommand(__DIR__));
+$application->add(new ModuleUninstallCommand(__DIR__));
+$application->add(new SiteInstallCommand());
+$application->add(new ThemeInstallCommand(__DIR__));
+$application->add(new ThemeChangeCommand(__DIR__));
+$application->add(new SchedulerExecuteCommand());
+$application->run();

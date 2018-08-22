@@ -1,0 +1,28 @@
+---
+#
+# role: php
+# task: httpd
+# template: httpd-2.4.6_httpd.conf.j2
+#
+apache_run_user: "apache"
+apache_run_group: "apache"
+
+#
+# mysql
+#
+mysql_host: localhost
+mysql_root_password: P@ssw0rd
+
+#
+# role: php
+# task: php
+# template: php-7.1.13_php.ini.j2
+#
+php_ini_expose_php: "Off"
+php_ini_memory_limit: "1024M"
+php_ini_error_reporting: "E_ALL"
+php_ini_display_errors: "On"
+php_ini_post_max_size: "100M"
+php_ini_upload_max_filesize: "100M"
+php_ini_max_file_uploads: "20"
+php_ini_date_timezone: "Asia/Tokyo"

@@ -1,0 +1,37 @@
+---
+application_mysql_databases:
+  - name: app_01
+    collation: utf8mb4_general_ci
+
+application_mysql_users:
+  - host: 127.0.0.1
+    user_name: root
+    user_password: P@ssw0rd
+    priv: "*.*:ALL,GRANT"
+  - host: localhost
+    user_name: drupal
+    user_password: P@ssw0rd
+    priv: "app_01.*:ALL,GRANT"
+
+application_directories:
+  - path: /home/httpd
+    owner: vagrant
+    group: apache
+    mode: "u=rwx,g=rwx,o=r"
+    recurse: False
+  - path: /home/httpd/app_01
+    owner: vagrant
+    group: apache
+    mode: "u=rwx,g=rwx,o=r"
+    recurse: False
+  - path: /home/httpd/design_01
+    owner: vagrant
+    group: apache
+    mode: "u=rwx,g=rwx,o=r"
+    recurse: False
+
+application_vhosts:
+  - src: app_01.conf.j2
+    dest: app_01.conf
+  - src: design_01.conf.j2
+    dest: design_01.conf

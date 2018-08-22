@@ -1,0 +1,33 @@
+---
+- name: include vars
+  include_vars: "{{ mysql_version }}.yml"
+
+- name: add repos
+  yum:
+    state: present
+    name: "{{ item }}"
+  with_items: "{{ mysql_repos }}" # defaults/main.yml
+
+- name: yum install mysql
+  yum:
+    enablerepo: "{{ mysql_enablerepo }}" # defaults/main.yml
+    state: present
+    name: "{{ item }}"
+  with_items: "{{ mysql_packages }}" # defaults/main.yml
+
+- name: copy /etc/my.cnf
+  template:
+    src: mysql-5.7.21_my.cnf.j2
+    dest: /etc/my.cnf
+    backup: yes
+    owner: root
+    group: root
+    mode: 0644
+
+- name: systemd mysql
+  systemd:
+    name: mysqld.service
+    enabled: yes
+    state: started
+
+- include_tasks: root_initialize.yml

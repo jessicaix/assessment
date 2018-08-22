@@ -1,0 +1,25 @@
+---
+- name: check mysql root initial password has been changed
+  stat:
+    path: /root/.mysql_root_initial_password_changed
+  register: mysql_root_initial_password_changed
+
+- name: get mysql root initial password from mysqld.log
+  shell: grep 'temporary password' /var/log/mysqld.log | awk '{print $NF}'
+  register: mysql_root_initial_password
+  when: not mysql_root_initial_password_changed.stat.exists
+
+- name: configure mysql root user
+  # group_vars/db.yml
+  shell: |
+    mysql -u root -p"{{ mysql_root_initial_password.stdout }}" --connect-expired-password -e "ALTER USER 'root'@'{{ mysql_host }}' IDENTIFIED BY '{{ mysql_root_password }}';"
+    touch /root/.mysql_root_initial_password_changed
+  when: not mysql_root_initial_password_changed.stat.exists
+
+- name: copy /root/.my.cnf
+  template:
+    src: root.my.cnf.j2
+    dest: /root/.my.cnf
+    owner: root
+    group: root
+    mode: 0600

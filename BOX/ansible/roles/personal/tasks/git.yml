@@ -1,0 +1,22 @@
+---
+- name: setup git-prompt.sh
+  become_user: vagrant
+  get_url:
+    url: https://raw.githubusercontent.com/git/git/59d3924fbb300ebfe05f9079bcfe29d0a3f30661/contrib/completion/git-prompt.sh
+    dest: ~/.git-prompt.sh
+    validate_certs: no
+
+- name: setup git-completion.bash 
+  become_user: vagrant
+  get_url:
+    url: https://raw.githubusercontent.com/git/git/59d3924fbb300ebfe05f9079bcfe29d0a3f30661/contrib/completion/git-completion.bash
+    dest: ~/.git-completion.bash
+    validate_certs: no
+
+- name: git config
+  become_user: vagrant
+  git_config:
+    scope: "{{ item.scope }}"
+    name: "{{ item.name }}"
+    value: "{{ item.value }}"
+  with_items: "{{ personal_git_configs }}"

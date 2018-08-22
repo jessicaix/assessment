@@ -1,0 +1,58 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Dotenv.load
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/7"
+
+  config.vm.define "web1" do |machine|
+    machine.vm.hostname = "drupal-assessment"
+    machine.vm.network "private_network", ip: "#{ENV['VB_PRIVATE_IP']}"
+
+    machine.vm.provider "virtualbox" do |vb|
+      vb.name = "drupal-assessment"
+      vb.customize [
+        "modifyvm", :id,
+        "--memory", "#{ENV['VB_MEMORY']}",
+        "--cpus", "#{ENV['VB_CPU']}",
+        "--ioapic", "on"
+      ]
+    end
+
+    machine.vm.provision "ansible_local" do |ansible|
+#      ansible.inventory_path = "ansible/hosts/local/inventory"
+      ansible.playbook = "ansible/playbook.#{ENV['VB_COMPANY']}.yml"
+      ansible.limit   = "all"
+      ansible.tags    = "all"
+      ansible.verbose = ""
+      ansible.groups  = {
+        "web" => ["web1"],
+        "all:vars" => {
+          "ansible_connection" => "local"
+        }
+      }
+    end
+  end
+
+  if "#{ENV['VB_USE_PROXY']}" == "yes"
+    config.proxy.http     = "#{ENV['VB_PROXY_HTTP']}"
+    config.proxy.https    = "#{ENV['VB_PROXY_HTTPS']}"
+    config.proxy.no_proxy = "#{ENV['VB_PROXY_NO_PROXY']}"
+  end
+
+  # set type: "virtualbox" explicitly.
+  # see: https://qiita.com/tenmyo/items/c2bb714117c98ae979de
+  #
+  config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
+  config.vm.synced_folder "../drupal-site", "/home/httpd/app_01/drupal-site", type: "virtualbox"
+  #config.vm.synced_folder ".", "/vagrant", type: "rsync"
+  #config.vm.synced_folder "../Drupal", "/home/httpd/app_01/web", type: "rsync"
+
+  # to add general purpose synced folders,
+  # set VB_ADDITIONAL_SYNCED_FOLDERS to "yes" in .env
+  #
+  if "#{ENV['VB_ADDITIONAL_SYNCED_FOLDERS']}" == "yes"
+    config.vm.synced_folder "./share01", "/home/vagrant/share01", :owner => 'vagrant', :group => 'vagrant', create: true, mount_options: ['dmode=770','fmode=770'], type: "virtualbox"
+   end
+end

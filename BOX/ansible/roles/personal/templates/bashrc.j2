@@ -1,0 +1,31 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+# User specific aliases and functions
+
+#
+# umask
+#
+umask 0002
+
+#
+# git - alias
+#
+alias gitst='git status'
+alias gitlog='git log --decorate --graph'
+alias gitlogo='git log --decorate --graph --oneline'
+alias gitlogob='git log --decorate --graph --oneline --branches'
+alias gitdiff='git diff'
+alias gitdiffst='git diff --staged'
+
+#
+# git - completion
+#
+source ~/.git-prompt.sh
+source ~/.git-completion.bash
+GIT_PS1_SHOWDIRTYSTATE=true
+export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1 "(%s)")\[\033[00m\]\$ '

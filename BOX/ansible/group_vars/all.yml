@@ -1,0 +1,36 @@
+---
+#
+# role: common
+# task: iptables
+#
+disable_firewalld: "yes"
+
+#
+# role: common
+# task: locale
+#
+locale: ja_JP.UTF-8
+
+#
+# role: common
+# task: timezone
+#
+timezone: Asia/Tokyo
+
+#
+# role: common
+# task: sshd
+# template: sshd_config.j2
+#
+sshd_config_password_authentication: "yes"
+
+#
+# role: common
+# task: hosts
+# template: hosts.j2
+#
+hosts:
+  - ip: 10.0.201.182
+    name: dm-satis.goobear.com
+  - ip: 10.0.201.182
+    name: dm-satis-dev.goobear.com
