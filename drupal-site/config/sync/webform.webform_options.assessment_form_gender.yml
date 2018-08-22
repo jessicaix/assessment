@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: assessment_form_gender
+label: 'Assessment form gender'
+category: ''
+likert: false
+options: "Male: Male\nFemale: Female\n"
