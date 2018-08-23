@@ -2,6 +2,9 @@ framework:
   css:
     theme:
       stylesheets/style.css: {}
+      stylesheets/custom.css: {}
+      https://fonts.googleapis.com/css?family=Varela+Round: {type: external}
+      https://fonts.googleapis.com/css?family=Roboto: {type: external}
   js:
     bootstrap/assets/javascripts/bootstrap/affix.js: {}
     bootstrap/assets/javascripts/bootstrap/alert.js: {}
