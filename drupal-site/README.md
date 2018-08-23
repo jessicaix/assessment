@@ -21,5 +21,5 @@ Finaly, run following command that mentioned in **Build Drupal Site** (refering 
 
 Note: Let's clear Drupal DB cache.
 ```
-drupal cr all
+php ps_console/console ps:cache:clear
 ```
