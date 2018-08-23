@@ -2,89 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ca597f0-f6e1-4460-b612-14a326859de0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/web/modules/custom/gobear_jobs/templates/gobear-jobs.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/sites/default/services.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/themes/custom/gobear/images/header.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/themes/custom/gobear/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/themes/custom/gobear/stylesheets/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/themes/custom/gobear/templates/system/html.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/themes/custom/gobear/templates/system/page-title.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/themes/custom/gobear/templates/system/page.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/modules/custom/gobear_jobs/gobear_jobs.module" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/gobear_jobs/gobear_jobs.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/modules/custom/gobear_jobs/gobear_jobs.routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/gobear_jobs/gobear_jobs.routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/modules/custom/gobear_jobs/src/Controller/JobsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/gobear_jobs/src/Controller/JobsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_block--search-form-block._-9HtaDVE8pCe5SyzLjs47G6RZ/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_block--search-form-block._-9HtaDVE8pCe5SyzLjs47G6RZ/XxD-WVjjDUmVCQGblWaYQOOhHVQfAHy-9Fa2mgLvwiM.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_block--search-form-block._XvcglJkCAjPFIFcXZlg_iuycU/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_block--search-form-block._XvcglJkCAjPFIFcXZlg_iuycU/ccX_uH2wNFkSFdGO7vXKUdsWo3ZXkuvFRy___xRMjkY.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_block--system-branding-bl_72GkZTYHvldCdMcY-Fr9WtVSZ/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_block--system-branding-bl_72GkZTYHvldCdMcY-Fr9WtVSZ/hWgs7Mm15j-lvW_LT6ZLBOrykkoMKbriSG8ouRtqEms.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_block--system-menu-block._1hXD0762SwwNpzV7K2aSpV7W5/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_block--system-menu-block._1hXD0762SwwNpzV7K2aSpV7W5/3cpkSbDy5MKrhVBmzZydjGOIcBmOIGPwvU6ShVejfm0.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_block--system-menu-block._2hNSCNK6Y2jmAWQaMH3vksp4p/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_block--system-menu-block._2hNSCNK6Y2jmAWQaMH3vksp4p/e8HTsehSmvo77AGGdoQZmtEeeoTaW74goRJoKZow-Yk.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_block--system-messages-bl_ZI0iUqt_t91aPosCA454NgoNz/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_block--system-messages-bl_ZI0iUqt_t91aPosCA454NgoNz/2nI0MaR4LFZeayPhqX-_E-fetSVKTggpmlXLjARZOlA.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_block.html.twig_NJ8S4QqIhiqAiD3IV7bDf1Kr1/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_block.html.twig_NJ8S4QqIhiqAiD3IV7bDf1Kr1/sUu0NHDngGBu7cfDyo27Ji9KeuQdtPbSLLVs7VuXz-g.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_container.html.twig_5ytYVUs_gdkx819cOy1xqJ2Z_/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_container.html.twig_5ytYVUs_gdkx819cOy1xqJ2Z_/aWHRn6AJWfTdFiFzHjl9A1hOne7cJrCp-pTlOlS--7w.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_feed-icon.html.twig_GzHwYygHdH77hQiaDIr3hDVlR/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_feed-icon.html.twig_GzHwYygHdH77hQiaDIr3hDVlR/6MBMa_l39CVYhoJYQk8OPrYHgkQ0EY7K4hB5RjREnVk.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_fieldset.html.twig_JMAAwhWf4E9thX8NFpCu7nvgO/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_fieldset.html.twig_JMAAwhWf4E9thX8NFpCu7nvgO/YmR_Fv1G6rdca_UgyG_rYdYzfDau-HqoBSUTrNz1iEk.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_form--search-block-form.h_g-IqeLH1OKGXFN_QYONS3x-jt/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_form--search-block-form.h_g-IqeLH1OKGXFN_QYONS3x-jt/B8N3TYxggWPUv3h6ZFdAtoq2HR9T0I7wAwA9xH4948Y.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_form-element-label.html.t_LIUK9REF8eGBcgyB37knqChLi/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_form-element-label.html.t_LIUK9REF8eGBcgyB37knqChLi/t_EOhc6ohRvUM1bZUtedr_AQ-JuPTEDZyr-Nr7RvYMY.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_form-element.html.twig_dJcTIbdx1y7B0dbOtEyyZSSZ1/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_form-element.html.twig_dJcTIbdx1y7B0dbOtEyyZSSZ1/x9x18VH21gkpmvqA18ZsWuTdSyUj4GY-BcAsQn6IiV8.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_form.html.twig_yB95M-mH2KEXj4tKtKISfLbel/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_form.html.twig_yB95M-mH2KEXj4tKtKISfLbel/rGeYz0a-mtgNv8qPcXnZwvjT2FaESSuD2TmlSWTsKLI.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_html.html.twig_gQv-GORxUVif_Pag4s-5z2NkO/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_html.html.twig_gQv-GORxUVif_Pag4s-5z2NkO/st_njloxmRmflGAqNxgrVm1tj5QJiouufDgsinPgRgI.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_input.html.twig_jYi6QYvFpjKLYKZCId7BmHw8z/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_input.html.twig_jYi6QYvFpjKLYKZCId7BmHw8z/DuvBAR7CIP8TX3qC5CT3awiB0D2hF6-5t5KegdCGXbs.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_install-page.html.twig_eG0YDsfcoFlt83O9OZG4ysQES/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_install-page.html.twig_eG0YDsfcoFlt83O9OZG4ysQES/Lx8RocCXTd1dEP_gZN5CHSFp4hfglNXJFlFOaPuX780.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_links.html.twig_KA9UNfGPPAAfgCg_weyFshk4D/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_links.html.twig_KA9UNfGPPAAfgCg_weyFshk4D/XCssujRbk8D-ZyQqNsgzcVeu8Vl_omUpIshd8gIDjfo.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_maintenance-task-list.htm_sB983SWLW9VoWXmkj9Mk9GGwW/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_maintenance-task-list.htm_sB983SWLW9VoWXmkj9Mk9GGwW/4HFXN7olbcPgvN5_AplBPkaBwVbfso3yNEPOICkAoWo.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_menu--toolbar.html.twig_rEyH-nXH5XjWIMdT-yjXXlvnB/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_menu--toolbar.html.twig_rEyH-nXH5XjWIMdT-yjXXlvnB/Nat5DAkEzQS31Uq64tsFTfvihiYzvPwbpvHUKr0cUVs.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_menu.html.twig_6_49nUJrABYdgsuH1VhK8sIfM/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_menu.html.twig_6_49nUJrABYdgsuH1VhK8sIfM/VuTpCOC5KB05HZJBQ1rr1MEwkJFgSYlfLRontdJ-kSs.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_off-canvas-page-wrapper.h_hlAfqNqVOta6cQY1nMpQqxAZ7/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_off-canvas-page-wrapper.h_hlAfqNqVOta6cQY1nMpQqxAZ7/UaPbNuQ0uvkUc_w3oUBS3ZV1W8XvvM9tIJYj_Ki8ia0.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_page-title.html.twig_Kj22JzrbuWqFmqffbsmZOndRV/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_page-title.html.twig_Kj22JzrbuWqFmqffbsmZOndRV/rc4KhsERRLwJK5V8JjF5QUu9Vb2iQHpXvB8LHKcl-G0.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_page-title.html.twig_ru8-oS6iQHH9XXT9fI_2HbHtS/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_page-title.html.twig_ru8-oS6iQHH9XXT9fI_2HbHtS/MAMay-tUT1XOd6tQoxoKhzMhy6uy4yAh1nmgtDIvUrg.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_page.html.twig_u5wurMyx4yyLrcXBTHkEErVIO/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_page.html.twig_u5wurMyx4yyLrcXBTHkEErVIO/ynAihArRhTBWwmxdhPF458Uq90NreeieETpo7OxfJA8.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_pager.html.twig_sbCI69R_UAdtPaGn0ZzTyeyem/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_pager.html.twig_sbCI69R_UAdtPaGn0ZzTyeyem/cmqvFq9gnw5wotwfKGOp8Ao1DommtLk-ehhGHxuVr3k.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_progress-bar.html.twig_KLZjEpo-27Ghv3Yyd1ETcZ2Of/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_progress-bar.html.twig_KLZjEpo-27Ghv3Yyd1ETcZ2Of/EO_oXFjoqws-tllQ916jtvTYnnrqxqWJnH_kJRRuU-w.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_region--header.html.twig_lzq1A9ghT2jjveN_i8p4TyuUy/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_region--header.html.twig_lzq1A9ghT2jjveN_i8p4TyuUy/0fDHajz85j9f0XWSgMpcLz9Qfjx6iYYAOV203dhSN3k.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_region.html.twig_MR3fMmw95qbpuDFvbyuI9QHlG/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_region.html.twig_MR3fMmw95qbpuDFvbyuI9QHlG/qYY7SMh6RVoTGgOir1OnzM4Wvkuff75sHOFoUK1ifcE.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_select.html.twig_Mr8lFiPaNe0gAm8QCjlpAZN1y/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_select.html.twig_Mr8lFiPaNe0gAm8QCjlpAZN1y/SvRUNeWH4dqJWD9PuDRyK8iZ8lZWzHtsXeoXR_pI6B8.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_status-messages.html.twig_3IhisVoQLOYIb64NBegMDuHJs/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_status-messages.html.twig_3IhisVoQLOYIb64NBegMDuHJs/gU2sStsMNnBDgMOZSGHS3aTch_kgjXrW94o8ShoU16M.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_status-messages.html.twig_xfJj5DnEqpgtG2BHufPlBKzpV/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_status-messages.html.twig_xfJj5DnEqpgtG2BHufPlBKzpV/gW7UOC11hpX-RF9OXNINO8SwtkVfRUu53VvU2XCdkms.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_toolbar.html.twig_6OS5XDMFNd05xfubEcPy9VaSc/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_toolbar.html.twig_6OS5XDMFNd05xfubEcPy9VaSc/29jP0ueS4ClLcezXhkMw5Mbv6nStRIeN9S5fpQa8O-E.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_views-view.html.twig_My8wCKNyJv0eBmdCJ1uPxYt8x/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/php/twig/5b7ec03b8cea4_views-view.html.twig_My8wCKNyJv0eBmdCJ1uPxYt8x/6x7bGeQ7Jb74NPjF-KyDNsYzoXzmJ1uWQi0zTFEpN9I.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/sites/default/settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/themes/custom/gobear/gobear.libraries.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/themes/custom/gobear/gobear.libraries.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -102,9 +20,18 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.2460815">
+    <splitter split-orientation="horizontal" split-proportion="0.4929467">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/composer.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="page.html.twig" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/themes/custom/gobear/templates/system/page.html.twig">
               <provider selected="true" editor-type-id="text-editor">
@@ -114,11 +41,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/themes/custom/gobear/stylesheets/custom.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+                <state relative-caret-position="315">
+                  <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="30">
+                  <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -127,7 +63,7 @@
             <entry file="file://$PROJECT_DIR$/web/modules/custom/gobear_jobs/src/Controller/JobsController.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="269">
-                  <caret line="52" column="7" lean-forward="true" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+                  <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
                   <folding>
                     <element signature="e#49#90#0#PHP" expanded="true" />
                   </folding>
@@ -148,7 +84,7 @@
             <entry file="file://$PROJECT_DIR$/web/sites/default/settings.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="464">
-                  <caret line="801" column="26" lean-forward="true" selection-start-line="801" selection-start-column="26" selection-end-line="801" selection-end-column="26" />
+                  <caret line="801" column="26" selection-start-line="801" selection-start-column="26" selection-end-line="801" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
@@ -171,13 +107,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="html.html.twig" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/themes/custom/gobear/templates/system/html.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-356" />
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="gobear_jobs.routing.yml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/modules/custom/gobear_jobs/gobear_jobs.routing.yml">
               <provider selected="true" editor-type-id="text-editor">
@@ -195,7 +124,7 @@
             <entry file="file://$PROJECT_DIR$/web/modules/custom/gobear_jobs/templates/gobear-jobs.html.twig">
               <provider selected="true" editor-type-id="text-editor">
                 <state>
-                  <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="21" />
+                  <caret column="12" selection-start-column="12" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
@@ -231,7 +160,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/web/modules/custom/gobear_jobs/gobear_jobs.info.yml" />
         <option value="$PROJECT_DIR$/web/modules/custom/gobear_jobs/gobear_jobs.routing.yml" />
         <option value="$PROJECT_DIR$/web/themes/custom/gobear/templates/system/page.html.twig" />
@@ -242,6 +170,7 @@
         <option value="$PROJECT_DIR$/web/modules/custom/gobear_jobs/src/Controller/JobsController.php" />
         <option value="$PROJECT_DIR$/web/modules/custom/gobear_jobs/templates/gobear-jobs.html.twig" />
         <option value="$PROJECT_DIR$/web/themes/custom/gobear/stylesheets/custom.css" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -391,66 +320,6 @@
               <item name="assessment" type="b2602c69:ProjectViewProjectNode" />
               <item name="assessment" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="assessment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assessment" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="assessment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assessment" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="assessment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assessment" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="custom" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="assessment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assessment" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="custom" type="462c0819:PsiDirectoryNode" />
-              <item name="gobear_jobs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="assessment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assessment" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="custom" type="462c0819:PsiDirectoryNode" />
-              <item name="gobear_jobs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="assessment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assessment" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="custom" type="462c0819:PsiDirectoryNode" />
-              <item name="gobear_jobs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="assessment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assessment" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="custom" type="462c0819:PsiDirectoryNode" />
-              <item name="gobear_jobs" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="assessment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assessment" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="profiles" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -501,7 +370,7 @@
       <workItem from="1531430707370" duration="247000" />
       <workItem from="1535030665500" duration="2597000" />
       <workItem from="1535033322533" duration="172000" />
-      <workItem from="1535033675879" duration="7573000" />
+      <workItem from="1535033675879" duration="9262000" />
     </task>
     <task id="LOCAL-00001" summary="Init setup Drupal">
       <created>1535034991424</created>
@@ -517,11 +386,18 @@
       <option name="project" value="LOCAL" />
       <updated>1535037430698</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Style jobs listing page">
+      <created>1535041911733</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1535041911733</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10589000" />
+    <option name="totallyTimeSpent" value="12278000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="987" extended-state="0" />
@@ -531,9 +407,9 @@
       <window_info anchor="bottom" id="Regex Tester" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32921347" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32921347" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.34269664" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.34269664" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22100122" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
@@ -560,7 +436,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Init setup Drupal" />
     <MESSAGE value="Add gobear jobs module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add gobear jobs module" />
+    <MESSAGE value="Style jobs listing page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Style jobs listing page" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/composer.json">
@@ -615,22 +492,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/modules/custom/gobear_jobs/gobear_jobs.info.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -708,7 +571,7 @@
     <entry file="file://$PROJECT_DIR$/web/sites/default/settings.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
-          <caret line="801" column="26" lean-forward="true" selection-start-line="801" selection-start-column="26" selection-end-line="801" selection-end-column="26" />
+          <caret line="801" column="26" selection-start-line="801" selection-start-column="26" selection-end-line="801" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -753,27 +616,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/modules/custom/gobear_jobs/templates/gobear-jobs.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/gobear/stylesheets/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/modules/custom/gobear_jobs/src/Controller/JobsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
-          <caret line="52" column="7" lean-forward="true" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+          <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
           <folding>
             <element signature="e#49#90#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/modules/custom/gobear_jobs/templates/gobear-jobs.html.twig">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="21" />
+        <state relative-caret-position="330">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/themes/custom/gobear/stylesheets/custom.css">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="30">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
         </state>
       </provider>
     </entry>
