@@ -14,7 +14,7 @@ function gobear_jobs_theme($existing, $type, $theme, $path) {
     'jobs_content_list_block' => array(
       'template' => 'jobs-content-list-block',
       'variables' => array(
-        'content_list' => array(),
+        'job_list' => array(),
       ),
     ),
   ];

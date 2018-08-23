@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Varela+Round');
+
+body{ 
+    margin: 0;
+}
+
+.container-fluid {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.top-bnr {
+    margin-bottom: 50px;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.bnr-title {
+    font-size: 45px;
+    font-family: 'Varela Round';
+}
+
+.line-item{
+    padding: 15px 30px;
+}
+
+.line-item h3 {
+    font-size: 23px;
+    font-family: 'Varela Round';
+    color: #333333;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.line-item .company-location span {
+    font-size: 15px;
+    font-family: 'Roboto';
+    color: #999999;
+}
+
+.line-item .company-location span.company {
+    color: #7eacf6;
+}
+
+.line-item .description, .line-item .date, .line-item .type {
+    font-size: 15px;
+    font-family: 'Roboto';
+}
+
+.line-item .description > a {
+    color: #9bbff9;
+}
+
+.line-item .description > div {
+    margin-top: 10px;
+}
+
+.line-item .description, .line-item .date{
+    color: #999999;
+}
+
+.line-item .date{
+    margin-bottom: 10px;
+}
+
+.line-item .type {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.description a.collapsed:after  {
+    content: 'More info >';
+}
+
+.description a:not(.collapsed):after {
+    content: 'Less info >';
+}
+
+.nopadding-left-right {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.noradius{
+    border-radius: 0;
+}
+
+.panel {
+    border-radius: 0;
+    border-color: #ececec;
+}
+
+.btn-success {
+    background-color: #6db141;
+    border-color: #6db141;
+}
+
+.bottom-margin {
+    margin: 15px 0;
+}

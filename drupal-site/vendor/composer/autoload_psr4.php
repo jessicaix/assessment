@@ -18,6 +18,7 @@ return array(
     'Webmozart\\PathUtil\\' => array($vendorDir . '/webmozart/path-util/src'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
     'Unish\\' => array($vendorDir . '/drush/drush/tests'),
+    'Twig\\Extensions\\' => array($vendorDir . '/twig/extensions/src'),
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
     'Tci\\PsConsole\\' => array($baseDir . '/ps_console/src'),
     'Symfony\\Thanks\\' => array($vendorDir . '/symfony/thanks/src'),

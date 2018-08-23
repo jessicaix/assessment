@@ -18,3 +18,8 @@ cd /home/httpd/app_01/drupal-site
 ```
 
 Finaly, run following command that mentioned in **Build Drupal Site** (refering to : /drupal-site/ps_console/README.md)
+
+Note: Let's clear Drupal DB cache.
+```
+drupal cr all
+```

@@ -19,9 +19,11 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/drupal-scaffold": "^2.5",
+        "drupal/bootstrap": "^3.12",
         "drupal/console": "<=1.6.0",
         "drupal/core": "~8.5.3",
         "drush/drush": "^9.0.0",
+        "twig/extensions": "^1.5",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"

@@ -21,3 +21,5 @@
 - ctools
 - page_manager
 - page_manager_ui
+
+- twig_extensions

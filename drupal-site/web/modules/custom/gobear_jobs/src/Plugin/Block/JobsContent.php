@@ -47,7 +47,12 @@ class JobsContent extends CustomBlockBase {
 
     return [
       '#theme' => 'jobs_content_list_block',
-      '#content_list' => $this->data,
+      '#job_list' => $this->data,
+      '#attached' => array(
+        'library' => array(
+          'gobear/jobs',
+        ),
+      )
     ];
   }
 

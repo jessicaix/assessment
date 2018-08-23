@@ -1,10 +1,33 @@
-<ul>
-    {% for item in content_list %}
-        <h1><b>Title:</b> {{ item.title }}</h1>
-        <li><b>Company:</b> {{ item.company }}</li>
-        <li><b>Location:</b> {{ item.location }}</li>
-        <li><b>Type:</b> {{ item.type }}</li>
-        <li><b>Create at:</b> {{ item.created_at }}</li>
-        <div><b>Description:</b> {{ item.description|raw }}</div>
+{% if job_list %}
+{% set item_count = 1 %}
+<div class="row">
+    {% for job in job_list %}
+        <div class="col-sm-12 line-item collapse-group panel panel-default">
+            <div class="col-sm-12 nopadding-left-right">
+                <h3>{{ job.title }}</h3>
+            </div>
+            <div class="col-sm-12 nopadding-left-right">
+                <div class="col-sm-12 nopadding-left-right company-location">
+                    <div class="col-sm-10 nopadding-left-right">
+                      <span class="company">@{{ job.company }}</span>  <span>|</span>  <span>{{ job.location }}</span>
+                    </div>
+                    <div class="col-sm-2 nopadding-left-right type btn btn-success noradius">{{ job.type }}</div>
+                </div>
+            </div>
+            <div class="col-sm-12 nopadding-left-right">
+                <p class="date">{{ 'Published'|t }} {{ job.created_at|time_diff }}</p>
+            </div>
+            <div class="col-sm-12 nopadding-left-right description ">
+                <a class="collapsed" data-toggle="collapse" href="#collapse_description{{ item_count }}" aria-expanded="false" aria-controls="collapse-description"></a>
+                <div class="collapse" id="collapse_description{{ item_count }}" aria-expanded="false">
+                    {{ job.description|raw }}
+                </div>
+                
+            </div>
+
+        </div>
+        {% set item_count = item_count + 1 %}
     {% endfor %}
-</ul>
+</div>
+{% endif %}
+<dir class="bottom-margin">&nbsp;</dir>
