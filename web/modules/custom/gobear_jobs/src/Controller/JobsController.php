@@ -45,8 +45,17 @@ class JobsController extends \Drupal\Core\Controller\ControllerBase {
   public function index() {
     try {
       $request = $this->httpClient->request('GET', 'https://jobs.github.com/positions.json', ['query' => ['location' => 'new+york']]);
-      $positions = $request->getBody()->getContents();
-      return new JsonResponse(json_decode($positions));
+      $jobs = $request->getBody()->getContents();
+      $jobs = json_decode($jobs);
+
+      foreach ($jobs as &$job) {
+        $job->created_at = \Drupal::service('date.formatter')->formatInterval(\Drupal::time()->getRequestTime() - strtotime($job->created_at));
+      }
+
+      return [
+        '#theme' => 'gobear_jobs',
+        '#jobs' => $jobs,
+      ];
     } catch (GuzzleException $e) {
       return new JsonResponse(['error' => $e->getMessage()]);
     }

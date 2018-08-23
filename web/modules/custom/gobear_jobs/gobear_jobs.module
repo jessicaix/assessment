@@ -29,7 +29,7 @@ function gobear_jobs_help($route_name, RouteMatchInterface $route_match) {
 function gobear_jobs_theme() {
   return [
     'gobear_jobs' => [
-      'render element' => 'children',
+      'variables' => ['jobs' => []],
     ],
   ];
 }
