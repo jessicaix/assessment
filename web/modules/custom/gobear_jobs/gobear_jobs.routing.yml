@@ -1,0 +1,7 @@
+gobear.jobs:
+  path: '/jobs'
+  defaults:
+    _controller: '\Drupal\gobear_jobs\Controller\JobsController::index'
+    _title: 'Job Listing'
+  requirements:
+    _permission: 'access content'

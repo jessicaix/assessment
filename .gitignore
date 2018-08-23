@@ -1,0 +1,4 @@
+web/sites/*/files/*
+web/sites/*/private
+web/files/*
+.idea
