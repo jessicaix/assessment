@@ -126,6 +126,7 @@ class ComposerStaticInita35605a02a7b8923028abcb09137bdfa
             'Drupal\\Console\\' => 15,
             'Drupal\\Component\\' => 17,
             'DrupalComposer\\DrupalScaffold\\' => 30,
+            'DrupalCodeBuilder\\' => 18,
             'Dotenv\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Common\\Inflector\\' => 26,
@@ -139,6 +140,7 @@ class ComposerStaticInita35605a02a7b8923028abcb09137bdfa
             'Consolidation\\AnnotatedCommand\\' => 31,
             'Composer\\Semver\\' => 16,
             'Composer\\Installers\\' => 20,
+            'CaseConverter\\' => 14,
         ),
         'B' => 
         array (
@@ -403,6 +405,10 @@ class ComposerStaticInita35605a02a7b8923028abcb09137bdfa
         array (
             0 => __DIR__ . '/..' . '/drupal-composer/drupal-scaffold/src',
         ),
+        'DrupalCodeBuilder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/drupal-code-builder/drupal-code-builder',
+        ),
         'Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
@@ -445,6 +451,10 @@ class ComposerStaticInita35605a02a7b8923028abcb09137bdfa
         'Composer\\Installers\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
+        ),
+        'CaseConverter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/joachim-n/case-converter',
         ),
         'Behat\\Mink\\Driver\\' => 
         array (

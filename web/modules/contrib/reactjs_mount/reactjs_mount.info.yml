@@ -1,0 +1,17 @@
+name: ReactJS Mount
+type: module
+description: Module for mounting ReactJS to a node
+# core: 8.x
+package: Headless
+
+# Information added by Drupal.org packaging script on 2018-01-18
+# version: '8.x-1.0-alpha1'
+# core: '8.x'
+# project: 'reactjs_mount'
+# datestamp: 1516287187
+
+# Information added by Drupal.org packaging script on 2018-03-13
+version: '8.x-1.0-alpha2'
+core: '8.x'
+project: 'reactjs_mount'
+datestamp: 1520953396
