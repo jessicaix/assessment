@@ -1,0 +1,6 @@
+name: 'Gobear Jobs'
+type: module
+description: 'TODO: Description of module'
+dependencies:
+  - reactjs_mount
+core: 8.x
