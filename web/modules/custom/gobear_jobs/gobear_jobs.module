@@ -5,31 +5,39 @@
  * Contains gobear_jobs.module.
  */
 
-use Drupal\Core\Routing\RouteMatchInterface;
-
-/**
- * Implements hook_help().
- */
-function gobear_jobs_help($route_name, RouteMatchInterface $route_match) {
-  switch ($route_name) {
-    // Main module help for the gobear_jobs module.
-    case 'help.page.gobear_jobs':
-      $output = '';
-      $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('GoBear assessment') . '</p>';
-      return $output;
-
-    default:
-  }
-}
+use Drupal\Core\Render\Element;
 
 /**
  * Implements hook_theme().
  */
 function gobear_jobs_theme() {
   return [
-    'gobear_jobs' => [
-      'render element' => 'children',
+    'gobear_job_list' => [
+      'variables' => ['jobs' => NULL],
     ],
   ];
+}
+
+/**
+ * Prepares variables for gobear-job-list.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - jobs: An array of gobear_job entity.
+ */
+function template_preprocess_gobear_job_list(&$variables) {
+  $variables['items'] = [];
+  $view_builder = \Drupal::entityTypeManager()->getViewBuilder('gobear_job');
+
+  if (!empty($variables['jobs'])) {
+    /** @var \Drupal\Core\Entity\EntityInterface $job */
+    foreach ($variables['jobs'] as $job) {
+      $build =  $view_builder->view($job);
+      $variables['items'][] = [
+        'id' => $job->id(),
+        'title' => $job->label(),
+        'entity' => $build,
+      ];
+    }
+  }
 }

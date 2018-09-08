@@ -1,0 +1,14 @@
+{% if items %}
+<ul class="item-list">
+  {% for item in items %}
+    <li class="clearfix">{{ item.title }}</li>
+  {% endfor %}
+</ul>
+{% else %}
+  <p>
+    {% trans %}
+      No items found. Please check again later.
+    {% endtrans %}
+  </p>
+{% endif %}
+

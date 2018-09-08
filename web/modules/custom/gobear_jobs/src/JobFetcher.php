@@ -35,6 +35,11 @@ class JobFetcher implements JobFetcherInterface {
   /**
    * {@inheritdoc}
    *
+   * @param $url
+   *
+   * @return array
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    * @throws \GuzzleHttp\Exception\GuzzleException
    */
   public function fetch($url) {
@@ -71,6 +76,5 @@ class JobFetcher implements JobFetcherInterface {
   private function createEntityFromData($data) {
     return $this->entityTypeManager->getStorage(static::ENTITY_TYPE)
       ->create($data);
-
   }
 }

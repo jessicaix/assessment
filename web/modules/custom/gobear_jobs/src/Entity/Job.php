@@ -2,17 +2,10 @@
 
 namespace Drupal\gobear_jobs\Entity;
 
-use Drupal\Core\Cache\RefinableCacheableDependencyInterface;
 use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\ContentEntityInterface;
-use Drupal\Core\Entity\EntityInterface;
-use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
-use Drupal\Core\Entity\FieldableEntityInterface;
-use Drupal\Core\Entity\TranslatableRevisionableInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
-use Drupal\Core\Session\AccountInterface;
-use Drupal\Core\TypedData\TranslatableInterface;
 
 /**
  * Defines the Job entity.
@@ -24,7 +17,8 @@ use Drupal\Core\TypedData\TranslatableInterface;
  *     "storage" = "Drupal\Core\Entity\ContentEntityNullStorage"
  *   },
  *   entity_keys = {
- *     "id" = "id"
+ *     "id" = "id",
+ *     "label" = "title"
  *   }
  * )
  */
