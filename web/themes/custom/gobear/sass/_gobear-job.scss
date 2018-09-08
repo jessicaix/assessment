@@ -1,3 +1,16 @@
+h1.page-header {
+  border-bottom-width: 0;
+  text-align: center;
+  color: #fff;
+}
+
+.region-header {
+  min-height: 350px;
+  background: url("../images/gobear-header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .gobear-job-list {
   h2 {
     font-size: 20px;

@@ -16,3 +16,4 @@ web/sites/*/files
 
 # IDE
 .idea
+.DS_Store
