@@ -32,11 +32,13 @@ function template_preprocess_gobear_job_list(&$variables) {
   if (!empty($variables['jobs'])) {
     /** @var \Drupal\Core\Entity\EntityInterface $job */
     foreach ($variables['jobs'] as $job) {
-      $build =  $view_builder->view($job);
       $variables['items'][] = [
         'id' => $job->id(),
         'title' => $job->label(),
-        'entity' => $build,
+        'company' => $job->get('company')->value,
+        'location' => $job->get('location')->value,
+        'created_at' => $job->get('created_at')->value,
+        'description' => $job->get('description')->value,
       ];
     }
   }

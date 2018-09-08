@@ -3,6 +3,6 @@ gobear_jobs.job_list_controller_build:
   path: '/jobs'
   defaults:
     _controller: '\Drupal\gobear_jobs\Controller\JobListController::build'
-    _title: 'Jobs'
+    _title: 'Job listing'
   requirements:
     _permission: 'access content'

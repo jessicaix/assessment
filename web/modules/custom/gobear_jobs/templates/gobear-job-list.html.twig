@@ -1,7 +1,14 @@
 {% if items %}
-<ul class="item-list">
+<ul class="list-unstyled gobear-job-list">
   {% for item in items %}
-    <li class="clearfix">{{ item.title }}</li>
+    <li class="clearfix">
+      <div>
+        {{ item.title }}
+        {{ item.company }}
+        {{ item.location }}
+        {{ item.created_at }}
+      </div>
+    </li>
   {% endfor %}
 </ul>
 {% else %}
