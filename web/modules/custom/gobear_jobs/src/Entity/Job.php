@@ -22,7 +22,7 @@ use Drupal\Core\Field\BaseFieldDefinition;
  *   }
  * )
  */
-class Job extends ContentEntityBase implements ContentEntityInterface {
+class Job extends ContentEntityBase implements JobInterface {
 
   /**
    * {@inheritdoc}
@@ -66,4 +66,84 @@ class Job extends ContentEntityBase implements ContentEntityInterface {
     return $fields;
   }
 
+  /**
+   * Returns the job description.
+   *
+   * @return string
+   */
+  public function getDescription() {
+    return $this->get('description')->value;
+  }
+
+  /**
+   * Returns the job type.
+   *
+   * @return string
+   */
+  public function getType() {
+    return $this->get('type')->value;
+  }
+
+  /**
+   * Returns the location.
+   *
+   * @return string
+   */
+  public function getLocation() {
+    return $this->get('location')->value;
+  }
+
+  /**
+   * Returns the application steps.
+   *
+   * @return string
+   */
+  public function getApplicationSteps() {
+    return $this->get('how_to_apply')->value;
+  }
+
+  /**
+   * Returns the company.
+   *
+   * @return string
+   */
+  public function getCompany() {
+    return $this->get('company')->value;
+  }
+
+  /**
+   * Returns the company website URL
+   *
+   * @return string
+   */
+  public function getCompanyUrl() {
+    return $this->get('company_url')->value;
+  }
+
+  /**
+   * Returns the company logo
+   *
+   * @return string
+   */
+  public function getCompanyLogo() {
+    return $this->get('company_logo')->value;
+  }
+
+  /**
+   * Returns the job URL.
+   *
+   * @return string
+   */
+  public function getExternalUrl() {
+    return $this->get('url')->value;
+  }
+
+  /**
+   * Returns the ISO timestamp when the job was posted.
+   *
+   * @return string
+   */
+  public function getCreatedAt() {
+    return $this->get('created_at')->value;
+  }
 }

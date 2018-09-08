@@ -2,12 +2,7 @@
 <ul class="list-unstyled gobear-job-list">
   {% for item in items %}
     <li class="clearfix">
-      <div>
-        {{ item.title }}
-        {{ item.company }}
-        {{ item.location }}
-        {{ item.created_at }}
-      </div>
+      {{ item }}
     </li>
   {% endfor %}
 </ul>
