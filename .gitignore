@@ -1,0 +1,15 @@
+# Ignore non-custom parts of Drupal.
+web/core
+
+# Ignore contrib modules. These should be created during build process.
+web/modules/contrib
+web/profiles/contrib
+web/themes/contrib
+web/libraries
+
+# Composer vendor
+vendor/
+vendor/.git
+
+# Ignore paths that contain user-generated content.
+web/sites/*/files
