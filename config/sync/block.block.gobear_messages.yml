@@ -1,0 +1,22 @@
+uuid: 7379a003-ea4d-476c-8416-b08b8b9c627f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gobear
+_core:
+  default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
+id: gobear_messages
+theme: gobear
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }
