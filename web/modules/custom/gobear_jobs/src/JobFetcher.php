@@ -2,13 +2,9 @@
 
 namespace Drupal\gobear_jobs;
 
-use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
-use Drupal\Component\Plugin\Exception\PluginNotFoundException;
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\GuzzleException;
-use GuzzleHttp\Exception\RequestException;
+use Drupal\Core\Http\ClientFactory;
 use GuzzleHttp\Psr7\Request;
 
 /**
@@ -24,12 +20,19 @@ class JobFetcher implements JobFetcherInterface {
   protected $entityTypeManager;
 
   /**
+   * @var \Drupal\Core\Http\ClientFactory
+   */
+  protected $httpClientFactory;
+
+  /**
    * JobFetcher constructor.
    *
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+   * @param \Drupal\Core\Http\ClientFactory $http_client_factory
    */
-  public function __construct(EntityTypeManagerInterface $entity_type_manager) {
+  public function __construct(EntityTypeManagerInterface $entity_type_manager, ClientFactory $http_client_factory) {
     $this->entityTypeManager = $entity_type_manager;
+    $this->httpClientFactory = $http_client_factory;
   }
 
   /**
@@ -50,10 +53,9 @@ class JobFetcher implements JobFetcherInterface {
     ];
 
     $request = new Request('GET', $url);
-    $client = new Client($options);
-    $response = $client->send($request);
+    $response = $this->httpClientFactory->fromOptions($options)->send($request);
 
-    $data = Json::decode($response->getBody()->__toString());
+    $data = Json::decode($response->getBody()->getContents());
     foreach ($data as $item) {
       if ($job = $this->createEntityFromData($item)) {
         $jobs[] = $job;

@@ -1,7 +1,7 @@
 services:
   gobear_jobs.fetcher:
     class: Drupal\gobear_jobs\JobFetcher
-    arguments: ['@entity_type.manager']
+    arguments: ['@entity_type.manager', '@http_client_factory']
   logger.channel.gobear_jobs:
     parent: logger.channel_base
     arguments: ['gobear_jobs']
