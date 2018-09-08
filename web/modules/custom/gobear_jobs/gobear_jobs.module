@@ -1,0 +1,88 @@
+<?php
+
+/**
+ * @file
+ * Contains gobear_jobs.module.
+ */
+
+use Drupal\Core\Render\Element;
+
+/**
+ * Implements hook_theme().
+ */
+function gobear_jobs_theme() {
+  return [
+    'gobear_job' => [
+      'render element' => 'elements',
+    ],
+    'gobear_job_list' => [
+      'variables' => ['jobs' => NULL],
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for gobear_job templates.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An array of elements to display in view mode.
+ *   - gobear_job: The gobear_job object.
+ *   - view_mode: View mode; e.g., 'full', 'teaser', etc.
+ */
+function template_preprocess_gobear_job(&$variables) {
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
+
+  $variables['gobear_job'] = $variables['elements']['#gobear_job'];
+
+  /** @var \Drupal\gobear_jobs\Entity\JobInterface $job */
+  $job = $variables['gobear_job'];
+
+  /** @var \Drupal\Core\Datetime\DateFormatterInterface $date_formatter */
+  $date_formatter = \Drupal::service('date.formatter');
+  $created_at = new \Drupal\Core\Datetime\DrupalDateTime($job->getCreatedAt());
+  $interval = $date_formatter->formatInterval(\Drupal::time()->getRequestTime() - $created_at->getTimestamp(), 1);
+
+  $variables += [
+    'id' => $job->id(),
+    'title' => $job->label(),
+    'type' => $job->getType(),
+    'location' => $job->getLocation(),
+    'created_at' => $job->getCreatedAt(),
+    'published' => t('Published @interval ago', ['@interval' => $interval]),
+    'description' => [
+      '#markup' => $job->getDescription(),
+    ],
+    'application_steps' => $job->getApplicationSteps(),
+  ];
+
+  if ($company_url = $job->getCompanyUrl()) {
+    $variables['company'] = [
+      '#type' => 'link',
+      '#title' => t('@ @company', ['@company' => $job->getCompany()]),
+      '#url' => \Drupal\Core\Url::fromUri($job->getCompanyUrl()),
+    ];
+  }
+  else {
+    $variables['company'] = t('@ @company', ['@company' => $job->getCompany()]);
+  }
+}
+
+/**
+ * Prepares variables for gobear-job-list.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - jobs: An array of gobear_job entity.
+ */
+function template_preprocess_gobear_job_list(&$variables) {
+  $variables['items'] = [];
+  $view_builder = \Drupal::entityTypeManager()->getViewBuilder('gobear_job');
+
+  if (!empty($variables['jobs'])) {
+    /** @var \Drupal\Core\Entity\EntityInterface $job */
+    foreach ($variables['jobs'] as $job) {
+      $variables['items'][] = $view_builder->view($job, 'teaser');
+    }
+  }
+}

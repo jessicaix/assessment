@@ -1,0 +1,55 @@
+.page-header {
+  border-bottom-width: 0;
+  h1 {
+    border-bottom-width: 0;
+    text-align: center;
+    color: #fff;
+    padding-top: 150px;
+  }
+}
+
+.region-header {
+  min-height: 350px;
+  background: url("../images/gobear-header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gobear-job-list {
+  h2 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  h3, h4, h5 {
+    font-family: $font-family-base;
+    font-weight: normal;
+    font-size: $font-size-base;
+    color: #999999;
+  }
+
+  > li {
+    padding: 25px 75px 35px 75px;
+    border: 1px solid #ececec;
+    margin-bottom: 45px;
+  }
+
+  .description {
+    padding-top: 20px;
+  }
+
+  .summary {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .type {
+    display: inline-block;
+    background-color: #6db141;
+    min-width: 210px;
+    color: #fff;
+    margin-left: auto;
+    height: 100%;
+    text-align: center;
+    padding: 5px 10px;
+  }
+}

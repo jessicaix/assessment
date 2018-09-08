@@ -1,0 +1,14 @@
+uuid: 210c997d-96b7-4aea-b8f7-2a8506439862
+name: 'GoBear Assessment'
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /jobs
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

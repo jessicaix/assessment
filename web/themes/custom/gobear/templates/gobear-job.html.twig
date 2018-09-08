@@ -1,0 +1,14 @@
+<div class="summary">
+  <div class="main">
+    <h2>{{ title }}</h2>
+    <h4>{{ company }} | {{ location }}</h4>
+    <h4>{{ published }}</h4>
+  </div>
+  <div class="type">{{ type }}</div>
+</div>
+<a data-toggle="collapse" href="#description-{{ id }}">
+  {{ 'More info'|t }}
+</a>
+<div class="collapse description" id="description-{{ id }}">
+  {{ description }}
+</div>
