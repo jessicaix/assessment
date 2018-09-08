@@ -4,18 +4,16 @@
   Drupal.behaviors.gobearJobList = {
     attach: function (context, settings) {
       var self = this;
-      $('.collapse').on('hide.bs.collapse', function () {
+      $('.collapse').on('hidden.bs.collapse', function () {
         self.toggleText(this);
       });
-      $('.collapse').on('show.bs.collapse', function () {
+      $('.collapse').on('shown.bs.collapse', function () {
         self.toggleText(this);
       });
     },
 
     toggleText: function (el) {
       var $trigger = $(el).closest('li').find('a[data-toggle="collapse"]');
-
-      console.log('Here...');
 
       if ($trigger.length) {
         if ($(el).hasClass('in')) {
