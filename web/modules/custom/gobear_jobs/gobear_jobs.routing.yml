@@ -1,0 +1,7 @@
+gobear_jobs.list:
+    path: '/jobs'
+    defaults:
+      _controller: '\Drupal\gobear_jobs\Controller\GobearjobsController::getPositions'
+      _title: 'Get Positions List'
+    requirements:
+      _permission: 'access content'
