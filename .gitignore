@@ -13,3 +13,6 @@ vendor/.git
 
 # Ignore paths that contain user-generated content.
 web/sites/*/files
+
+# IDE
+.idea
