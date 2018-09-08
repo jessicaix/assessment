@@ -44,6 +44,7 @@ function template_preprocess_gobear_job(&$variables) {
   $interval = $date_formatter->formatInterval(\Drupal::time()->getRequestTime() - $created_at->getTimestamp(), 1);
 
   $variables += [
+    'id' => $job->id(),
     'title' => $job->label(),
     'type' => $job->getType(),
     'location' => $job->getLocation(),
@@ -63,7 +64,7 @@ function template_preprocess_gobear_job(&$variables) {
     ];
   }
   else {
-    $variables['company'] = t('\@ @company', ['@company' => $job->getCompany()]);
+    $variables['company'] = t('@ @company', ['@company' => $job->getCompany()]);
   }
 }
 

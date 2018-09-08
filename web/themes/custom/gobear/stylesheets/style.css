@@ -8014,4 +8014,37 @@ p:last-child,
   margin-top: 0;
 }
 
+.gobear-job-list h2 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.gobear-job-list h3, .gobear-job-list h4, .gobear-job-list h5 {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #999999;
+}
+.gobear-job-list > li {
+  padding: 25px 75px 35px 75px;
+  border: 1px solid #ececec;
+  margin-bottom: 45px;
+}
+.gobear-job-list .description {
+  padding-top: 20px;
+}
+.gobear-job-list .summary {
+  display: flex;
+  justify-content: space-between;
+}
+.gobear-job-list .type {
+  display: inline-block;
+  background-color: #6db141;
+  min-width: 210px;
+  color: #fff;
+  margin-left: auto;
+  height: 100%;
+  text-align: center;
+  padding: 5px 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
