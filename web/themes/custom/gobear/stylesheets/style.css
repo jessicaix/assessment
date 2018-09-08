@@ -8014,7 +8014,10 @@ p:last-child,
   margin-top: 0;
 }
 
-h1.page-header {
+.page-header {
+  border-bottom-width: 0;
+}
+.page-header h1 {
   border-bottom-width: 0;
   text-align: center;
   color: #fff;
