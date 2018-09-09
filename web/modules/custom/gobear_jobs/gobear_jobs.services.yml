@@ -1,0 +1,3 @@
+services:
+  gobear_jobs.apis:
+    class: Drupal\gobear_jobs\Apis

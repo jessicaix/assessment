@@ -1,0 +1,6 @@
+name: Positions
+description: Give available positions in a location.
+package: GoBear
+type: module
+core: 8.x
+hidden: false

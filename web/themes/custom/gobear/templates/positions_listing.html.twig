@@ -1,0 +1,24 @@
+{# templates/positions_listing.html.twig #}
+
+<div class="job-listing">
+{% for position in positions %}
+    <div class="job-listing container">
+    <div class="col-lg-12">
+        <ul>
+            <li>
+            <h2 class="title tesytt">
+            {{ position.title }}
+            </h2>
+            <p><a href="#">@  {{ position.company }}</a> | {{ position.location }}</p>
+            <p class="tes22ttt">{{ position.created_at|date('m-d-Y')|render }}</p>
+            <a href="{{ position.url }}" class="link">{{ position.type }}</a>
+            <p class="show-desp">More Info ></p>
+            <div class="description">
+            {{ position.description|raw }}
+            </div>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endfor %}
+</div>
