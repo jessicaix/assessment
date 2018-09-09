@@ -1,18 +1,1 @@
 <?php
-
-/**
- * @file
- * Module file.
- */
-
-/**
- * hook_theme for listing page.
- */
-function gobear_jobs_theme() {
-    $theme['positions_listing'] = [
-      'variables' => ['positions' => NULL],
-      'template' => 'positions_listing',
-    ];
-
-    return $theme;
-}
