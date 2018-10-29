@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * GoBear primary module file.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+* Implements hook_help().
+*/
+function gobear_jobs_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the gobear_jobs module.
+    case 'help.page.gobear_jobs':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Gobear jobs page') . '</p>';
+      return $output;
+
+     default:
+  }
+}
+
+/**
+ * hook_theme for GoBear Job listing page.
+ */
+function gobear_jobs_theme($existing, $type, $theme, $path) {
+
+  return [
+    'job_listings' => [
+      'variables' => ['jobs' => NULL],
+    ],
+  ];
+
+}

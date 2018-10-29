@@ -1,0 +1,5 @@
+type: module
+name: GoBear Jobs
+description: 'Display GoBear Job listing'
+package: Custom
+core: '8.x'
