@@ -1,0 +1,60 @@
+@media screen and (min-width: 768px) {
+    body {
+        margin-top: 0;
+    }
+}
+
+.heading-container {
+    background: url("../images/header.png") no-repeat;
+    text-align: center;
+    max-height: 349px;
+    margin-bottom: 50px;
+}
+
+.page-header {
+    border: 0;
+    font-family: 'Varela Round';
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.jobs-list{
+    margin-bottom: 50px;
+}
+
+.job-item {
+    border-radius: 0;
+}
+
+.job-item .panel-body {
+    padding: 25px 20px;
+}
+
+.btn-job-type {
+    text-transform: uppercase;
+    border-radius: 0;
+}
+
+.job-info {
+    color: #999999;
+}
+
+h2.job-title {
+    font-family: 'Varela Round';
+    font-size: 25px;
+    margin: 0 0 5px;
+}
+
+.job-company {
+    color: #7eacf6;
+}
+
+.job-section {
+    margin-bottom: 5px;
+}
+
+.spit {
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 8px;
+}
